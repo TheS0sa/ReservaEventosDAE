@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            btnAddConfig = new Button();
-            txtBoxClave = new TextBox();
             txtBoxValor = new TextBox();
+            txtBoxClave = new TextBox();
+            btnAddConfig = new Button();
+            label2 = new Label();
+            label1 = new Label();
             groupBox2 = new GroupBox();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            txtBoxIdConfig = new TextBox();
-            txtBoxUpdateClave = new TextBox();
-            txtBoxUpdateValor = new TextBox();
             btnUpdateConfig = new Button();
+            txtBoxUpdateValor = new TextBox();
+            txtBoxUpdateClave = new TextBox();
+            txtBoxIdConfig = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             groupBox3 = new GroupBox();
-            label6 = new Label();
-            txtBoxDeleteCongbyId = new TextBox();
             btnConfiguracion = new Button();
+            txtBoxDeleteCongbyId = new TextBox();
+            label6 = new Label();
             btnListConfig = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -66,14 +66,29 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Agregar nueva configuración";
             // 
-            // label1
+            // txtBoxValor
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(14, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(45, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Clave";
+            txtBoxValor.Location = new Point(22, 148);
+            txtBoxValor.Name = "txtBoxValor";
+            txtBoxValor.Size = new Size(273, 27);
+            txtBoxValor.TabIndex = 4;
+            // 
+            // txtBoxClave
+            // 
+            txtBoxClave.Location = new Point(16, 73);
+            txtBoxClave.Name = "txtBoxClave";
+            txtBoxClave.Size = new Size(279, 27);
+            txtBoxClave.TabIndex = 3;
+            // 
+            // btnAddConfig
+            // 
+            btnAddConfig.Location = new Point(201, 206);
+            btnAddConfig.Name = "btnAddConfig";
+            btnAddConfig.Size = new Size(94, 29);
+            btnAddConfig.TabIndex = 2;
+            btnAddConfig.Text = "Agregar";
+            btnAddConfig.UseVisualStyleBackColor = true;
+            btnAddConfig.Click += btnAddConfig_Click;
             // 
             // label2
             // 
@@ -84,28 +99,14 @@
             label2.TabIndex = 1;
             label2.Text = "Valor";
             // 
-            // btnAddConfig
+            // label1
             // 
-            btnAddConfig.Location = new Point(201, 206);
-            btnAddConfig.Name = "btnAddConfig";
-            btnAddConfig.Size = new Size(94, 29);
-            btnAddConfig.TabIndex = 2;
-            btnAddConfig.Text = "Agregar";
-            btnAddConfig.UseVisualStyleBackColor = true;
-            // 
-            // txtBoxClave
-            // 
-            txtBoxClave.Location = new Point(16, 73);
-            txtBoxClave.Name = "txtBoxClave";
-            txtBoxClave.Size = new Size(279, 27);
-            txtBoxClave.TabIndex = 3;
-            // 
-            // txtBoxValor
-            // 
-            txtBoxValor.Location = new Point(22, 148);
-            txtBoxValor.Name = "txtBoxValor";
-            txtBoxValor.Size = new Size(273, 27);
-            txtBoxValor.TabIndex = 4;
+            label1.AutoSize = true;
+            label1.Location = new Point(14, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(45, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Clave";
             // 
             // groupBox2
             // 
@@ -123,23 +124,36 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Editar configuración";
             // 
-            // label3
+            // btnUpdateConfig
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(27, 39);
-            label3.Name = "label3";
-            label3.Size = new Size(77, 20);
-            label3.TabIndex = 0;
-            label3.Text = "Codigo/Id";
+            btnUpdateConfig.Location = new Point(237, 206);
+            btnUpdateConfig.Name = "btnUpdateConfig";
+            btnUpdateConfig.Size = new Size(94, 29);
+            btnUpdateConfig.TabIndex = 6;
+            btnUpdateConfig.Text = "Modificar";
+            btnUpdateConfig.UseVisualStyleBackColor = true;
+            btnUpdateConfig.Click += btnUpdateConfig_Click;
             // 
-            // label4
+            // txtBoxUpdateValor
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(27, 94);
-            label4.Name = "label4";
-            label4.Size = new Size(91, 20);
-            label4.TabIndex = 1;
-            label4.Text = "Nueva Clave";
+            txtBoxUpdateValor.Location = new Point(132, 155);
+            txtBoxUpdateValor.Name = "txtBoxUpdateValor";
+            txtBoxUpdateValor.Size = new Size(199, 27);
+            txtBoxUpdateValor.TabIndex = 5;
+            // 
+            // txtBoxUpdateClave
+            // 
+            txtBoxUpdateClave.Location = new Point(126, 98);
+            txtBoxUpdateClave.Name = "txtBoxUpdateClave";
+            txtBoxUpdateClave.Size = new Size(205, 27);
+            txtBoxUpdateClave.TabIndex = 4;
+            // 
+            // txtBoxIdConfig
+            // 
+            txtBoxIdConfig.Location = new Point(116, 38);
+            txtBoxIdConfig.Name = "txtBoxIdConfig";
+            txtBoxIdConfig.Size = new Size(215, 27);
+            txtBoxIdConfig.TabIndex = 3;
             // 
             // label5
             // 
@@ -150,35 +164,23 @@
             label5.TabIndex = 2;
             label5.Text = "Nuevo Valor";
             // 
-            // txtBoxIdConfig
+            // label4
             // 
-            txtBoxIdConfig.Location = new Point(116, 38);
-            txtBoxIdConfig.Name = "txtBoxIdConfig";
-            txtBoxIdConfig.Size = new Size(215, 27);
-            txtBoxIdConfig.TabIndex = 3;
+            label4.AutoSize = true;
+            label4.Location = new Point(27, 94);
+            label4.Name = "label4";
+            label4.Size = new Size(91, 20);
+            label4.TabIndex = 1;
+            label4.Text = "Nueva Clave";
             // 
-            // txtBoxUpdateClave
+            // label3
             // 
-            txtBoxUpdateClave.Location = new Point(126, 98);
-            txtBoxUpdateClave.Name = "txtBoxUpdateClave";
-            txtBoxUpdateClave.Size = new Size(205, 27);
-            txtBoxUpdateClave.TabIndex = 4;
-            // 
-            // txtBoxUpdateValor
-            // 
-            txtBoxUpdateValor.Location = new Point(132, 155);
-            txtBoxUpdateValor.Name = "txtBoxUpdateValor";
-            txtBoxUpdateValor.Size = new Size(199, 27);
-            txtBoxUpdateValor.TabIndex = 5;
-            // 
-            // btnUpdateConfig
-            // 
-            btnUpdateConfig.Location = new Point(237, 206);
-            btnUpdateConfig.Name = "btnUpdateConfig";
-            btnUpdateConfig.Size = new Size(94, 29);
-            btnUpdateConfig.TabIndex = 6;
-            btnUpdateConfig.Text = "Modificar";
-            btnUpdateConfig.UseVisualStyleBackColor = true;
+            label3.AutoSize = true;
+            label3.Location = new Point(27, 39);
+            label3.Name = "label3";
+            label3.Size = new Size(77, 20);
+            label3.TabIndex = 0;
+            label3.Text = "Codigo/Id";
             // 
             // groupBox3
             // 
@@ -192,22 +194,6 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Eliminar Configuración";
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(22, 43);
-            label6.Name = "label6";
-            label6.Size = new Size(77, 20);
-            label6.TabIndex = 0;
-            label6.Text = "Codigo/Id";
-            // 
-            // txtBoxDeleteCongbyId
-            // 
-            txtBoxDeleteCongbyId.Location = new Point(26, 71);
-            txtBoxDeleteCongbyId.Name = "txtBoxDeleteCongbyId";
-            txtBoxDeleteCongbyId.Size = new Size(258, 27);
-            txtBoxDeleteCongbyId.TabIndex = 1;
-            // 
             // btnConfiguracion
             // 
             btnConfiguracion.Location = new Point(201, 131);
@@ -216,6 +202,23 @@
             btnConfiguracion.TabIndex = 2;
             btnConfiguracion.Text = "Eliminar";
             btnConfiguracion.UseVisualStyleBackColor = true;
+            btnConfiguracion.Click += btnConfiguracion_Click;
+            // 
+            // txtBoxDeleteCongbyId
+            // 
+            txtBoxDeleteCongbyId.Location = new Point(26, 71);
+            txtBoxDeleteCongbyId.Name = "txtBoxDeleteCongbyId";
+            txtBoxDeleteCongbyId.Size = new Size(258, 27);
+            txtBoxDeleteCongbyId.TabIndex = 1;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(22, 43);
+            label6.Name = "label6";
+            label6.Size = new Size(77, 20);
+            label6.TabIndex = 0;
+            label6.Text = "Codigo/Id";
             // 
             // btnListConfig
             // 
