@@ -1,9 +1,8 @@
 ﻿using System;
 
-public class Class1
+public class E_Usuario
 {
-	public Class1()
-	{
+
 
          public int IdUsuario { get; set; }
     public string Nombre { get; set; }
@@ -12,6 +11,6 @@ public class Class1
     public string Contraseña { get; set; }
 
     // Constructor vacío 
-    public Usuario() { }
+    public E_Usuario() { }
 }
-}
+

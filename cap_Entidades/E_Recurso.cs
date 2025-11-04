@@ -1,9 +1,8 @@
 ﻿using System;
 
-public class Class1
+public class E_Recurso
 {
-	public Class1()
-	{
+
 
     public int IdRecurso { get; set; }
     public string NombreRecurso { get; set; }
@@ -12,6 +11,6 @@ public class Class1
     public string Estado { get; set; }
 
     // Constructor vacío 
-    public Recurso() { }
+    public E_Recurso() { }
 }
-}
+
