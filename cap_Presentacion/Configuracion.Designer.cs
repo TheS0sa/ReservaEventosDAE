@@ -47,6 +47,7 @@
             txtBoxDeleteCongbyId = new TextBox();
             label6 = new Label();
             btnListConfig = new Button();
+            btnGoHome = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -59,7 +60,7 @@
             groupBox1.Controls.Add(btnAddConfig);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(62, 25);
+            groupBox1.Location = new Point(28, 25);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(320, 250);
             groupBox1.TabIndex = 0;
@@ -117,7 +118,7 @@
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label4);
             groupBox2.Controls.Add(label3);
-            groupBox2.Location = new Point(491, 25);
+            groupBox2.Location = new Point(423, 25);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(371, 250);
             groupBox2.TabIndex = 1;
@@ -187,7 +188,7 @@
             groupBox3.Controls.Add(btnConfiguracion);
             groupBox3.Controls.Add(txtBoxDeleteCongbyId);
             groupBox3.Controls.Add(label6);
-            groupBox3.Location = new Point(263, 334);
+            groupBox3.Location = new Point(67, 313);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(320, 192);
             groupBox3.TabIndex = 2;
@@ -222,7 +223,7 @@
             // 
             // btnListConfig
             // 
-            btnListConfig.Location = new Point(644, 405);
+            btnListConfig.Location = new Point(536, 399);
             btnListConfig.Name = "btnListConfig";
             btnListConfig.Size = new Size(218, 29);
             btnListConfig.TabIndex = 3;
@@ -230,11 +231,22 @@
             btnListConfig.UseVisualStyleBackColor = true;
             btnListConfig.Click += btnListConfig_Click;
             // 
+            // btnGoHome
+            // 
+            btnGoHome.Location = new Point(815, 36);
+            btnGoHome.Name = "btnGoHome";
+            btnGoHome.Size = new Size(94, 29);
+            btnGoHome.TabIndex = 21;
+            btnGoHome.Text = "Menu";
+            btnGoHome.UseVisualStyleBackColor = true;
+            btnGoHome.Click += btnGoHome_Click;
+            // 
             // Configuracion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(921, 551);
+            Controls.Add(btnGoHome);
             Controls.Add(btnListConfig);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
@@ -271,5 +283,6 @@
         private Button btnConfiguracion;
         private TextBox txtBoxDeleteCongbyId;
         private Button btnListConfig;
+        private Button btnGoHome;
     }
 }

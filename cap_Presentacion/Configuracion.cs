@@ -39,5 +39,13 @@ namespace cap_Presentacion
         {
 
         }
+
+        private void btnGoHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 homeForm = new Form1();
+            homeForm.ShowDialog();
+            this.Close();
+        }
     }
 }
