@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using cap_Entidades;
-
+using cap_Negocios;
+using cap_Presentacion.FormAuxiliares;
 namespace cap_Presentacion
 {
     public partial class Configuracion : Form
@@ -20,7 +21,8 @@ namespace cap_Presentacion
 
         private void btnListConfig_Click(object sender, EventArgs e)
         {
-
+            ListConfiguraciones listConfiguraciones = new ListConfiguraciones();
+            listConfiguraciones.Show();
         }
 
         private void btnAddConfig_Click(object sender, EventArgs e)

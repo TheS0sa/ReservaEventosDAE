@@ -33,15 +33,11 @@
             btnListUsuarios = new Button();
             cmbAddEstado = new ComboBox();
             cmbAddMotivo = new ComboBox();
-            txbAddHoraInicio = new TextBox();
-            txbAddDateFin = new TextBox();
-            txbAddDateInicio = new TextBox();
             txbAddByIdRecurso = new TextBox();
             txbAddByIdUsuario = new TextBox();
             btnAddReserva = new Button();
             label7 = new Label();
             label8 = new Label();
-            label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -56,14 +52,10 @@
             label14 = new Label();
             label13 = new Label();
             label12 = new Label();
-            label11 = new Label();
             label9 = new Label();
             btnUpdateReserva = new Button();
             txbUpdateByIdUsuario = new TextBox();
             txbUpdateByIdRecurso = new TextBox();
-            txbUpdateDateInicio = new TextBox();
-            txbUpdateDateFin = new TextBox();
-            txbUpdateHoraInicio = new TextBox();
             cmbUpdateMotivo = new ComboBox();
             cmbUpdateEstado = new ComboBox();
             groupBox3 = new GroupBox();
@@ -72,6 +64,10 @@
             label10 = new Label();
             btnListarReservas = new Button();
             btnGoHome = new Button();
+            dtpAddInicio = new DateTimePicker();
+            dtpAddFin = new DateTimePicker();
+            dtpUpdateInicio = new DateTimePicker();
+            dtpUpdateFin = new DateTimePicker();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -79,19 +75,17 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(dtpAddFin);
+            groupBox1.Controls.Add(dtpAddInicio);
             groupBox1.Controls.Add(btnListRecurso);
             groupBox1.Controls.Add(btnListUsuarios);
             groupBox1.Controls.Add(cmbAddEstado);
             groupBox1.Controls.Add(cmbAddMotivo);
-            groupBox1.Controls.Add(txbAddHoraInicio);
-            groupBox1.Controls.Add(txbAddDateFin);
-            groupBox1.Controls.Add(txbAddDateInicio);
             groupBox1.Controls.Add(txbAddByIdRecurso);
             groupBox1.Controls.Add(txbAddByIdUsuario);
             groupBox1.Controls.Add(btnAddReserva);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
@@ -133,31 +127,10 @@
             // cmbAddMotivo
             // 
             cmbAddMotivo.FormattingEnabled = true;
-            cmbAddMotivo.Location = new Point(112, 261);
+            cmbAddMotivo.Location = new Point(113, 256);
             cmbAddMotivo.Name = "cmbAddMotivo";
             cmbAddMotivo.Size = new Size(252, 28);
             cmbAddMotivo.TabIndex = 16;
-            // 
-            // txbAddHoraInicio
-            // 
-            txbAddHoraInicio.Location = new Point(113, 220);
-            txbAddHoraInicio.Name = "txbAddHoraInicio";
-            txbAddHoraInicio.Size = new Size(251, 27);
-            txbAddHoraInicio.TabIndex = 15;
-            // 
-            // txbAddDateFin
-            // 
-            txbAddDateFin.Location = new Point(112, 179);
-            txbAddDateFin.Name = "txbAddDateFin";
-            txbAddDateFin.Size = new Size(252, 27);
-            txbAddDateFin.TabIndex = 14;
-            // 
-            // txbAddDateInicio
-            // 
-            txbAddDateInicio.Location = new Point(113, 143);
-            txbAddDateInicio.Name = "txbAddDateInicio";
-            txbAddDateInicio.Size = new Size(252, 27);
-            txbAddDateInicio.TabIndex = 13;
             // 
             // txbAddByIdRecurso
             // 
@@ -185,7 +158,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(40, 259);
+            label7.Location = new Point(42, 256);
             label7.Name = "label7";
             label7.Size = new Size(56, 20);
             label7.TabIndex = 8;
@@ -199,19 +172,10 @@
             label8.Size = new Size(0, 20);
             label8.TabIndex = 7;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(14, 220);
-            label6.Name = "label6";
-            label6.Size = new Size(82, 20);
-            label6.TabIndex = 5;
-            label6.Text = "Hora Inicio";
-            // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(68, 182);
+            label5.Location = new Point(68, 200);
             label5.Name = "label5";
             label5.Size = new Size(28, 20);
             label5.TabIndex = 4;
@@ -320,7 +284,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(58, 168);
+            label13.Location = new Point(58, 176);
             label13.Name = "label13";
             label13.Size = new Size(45, 20);
             label13.TabIndex = 3;
@@ -329,20 +293,11 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(75, 207);
+            label12.Location = new Point(75, 224);
             label12.Name = "label12";
             label12.Size = new Size(28, 20);
             label12.TabIndex = 4;
             label12.Text = "Fin";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(21, 245);
-            label11.Name = "label11";
-            label11.Size = new Size(82, 20);
-            label11.TabIndex = 5;
-            label11.Text = "Hora Inicio";
             // 
             // label9
             // 
@@ -376,27 +331,6 @@
             txbUpdateByIdRecurso.Size = new Size(251, 27);
             txbUpdateByIdRecurso.TabIndex = 11;
             // 
-            // txbUpdateDateInicio
-            // 
-            txbUpdateDateInicio.Location = new Point(120, 168);
-            txbUpdateDateInicio.Name = "txbUpdateDateInicio";
-            txbUpdateDateInicio.Size = new Size(252, 27);
-            txbUpdateDateInicio.TabIndex = 13;
-            // 
-            // txbUpdateDateFin
-            // 
-            txbUpdateDateFin.Location = new Point(119, 204);
-            txbUpdateDateFin.Name = "txbUpdateDateFin";
-            txbUpdateDateFin.Size = new Size(252, 27);
-            txbUpdateDateFin.TabIndex = 14;
-            // 
-            // txbUpdateHoraInicio
-            // 
-            txbUpdateHoraInicio.Location = new Point(120, 245);
-            txbUpdateHoraInicio.Name = "txbUpdateHoraInicio";
-            txbUpdateHoraInicio.Size = new Size(251, 27);
-            txbUpdateHoraInicio.TabIndex = 15;
-            // 
             // cmbUpdateMotivo
             // 
             cmbUpdateMotivo.FormattingEnabled = true;
@@ -415,19 +349,17 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(dtpUpdateFin);
+            groupBox3.Controls.Add(dtpUpdateInicio);
             groupBox3.Controls.Add(btnListIdReserva);
             groupBox3.Controls.Add(txbUpdateById);
             groupBox3.Controls.Add(label10);
             groupBox3.Controls.Add(cmbUpdateEstado);
             groupBox3.Controls.Add(cmbUpdateMotivo);
-            groupBox3.Controls.Add(txbUpdateHoraInicio);
-            groupBox3.Controls.Add(txbUpdateDateFin);
-            groupBox3.Controls.Add(txbUpdateDateInicio);
             groupBox3.Controls.Add(txbUpdateByIdRecurso);
             groupBox3.Controls.Add(txbUpdateByIdUsuario);
             groupBox3.Controls.Add(btnUpdateReserva);
             groupBox3.Controls.Add(label9);
-            groupBox3.Controls.Add(label11);
             groupBox3.Controls.Add(label12);
             groupBox3.Controls.Add(label13);
             groupBox3.Controls.Add(label14);
@@ -485,6 +417,34 @@
             btnGoHome.UseVisualStyleBackColor = true;
             btnGoHome.Click += btnGoHome_Click;
             // 
+            // dtpAddInicio
+            // 
+            dtpAddInicio.Location = new Point(112, 149);
+            dtpAddInicio.Name = "dtpAddInicio";
+            dtpAddInicio.Size = new Size(250, 27);
+            dtpAddInicio.TabIndex = 20;
+            // 
+            // dtpAddFin
+            // 
+            dtpAddFin.Location = new Point(112, 200);
+            dtpAddFin.Name = "dtpAddFin";
+            dtpAddFin.Size = new Size(250, 27);
+            dtpAddFin.TabIndex = 21;
+            // 
+            // dtpUpdateInicio
+            // 
+            dtpUpdateInicio.Location = new Point(126, 171);
+            dtpUpdateInicio.Name = "dtpUpdateInicio";
+            dtpUpdateInicio.Size = new Size(250, 27);
+            dtpUpdateInicio.TabIndex = 21;
+            // 
+            // dtpUpdateFin
+            // 
+            dtpUpdateFin.Location = new Point(119, 224);
+            dtpUpdateFin.Name = "dtpUpdateFin";
+            dtpUpdateFin.Size = new Size(250, 27);
+            dtpUpdateFin.TabIndex = 22;
+            // 
             // Reserva
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -511,7 +471,6 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private Label label8;
-        private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
@@ -523,22 +482,15 @@
         private TextBox txbAddByIdUsuario;
         private ComboBox cmbAddEstado;
         private ComboBox cmbAddMotivo;
-        private TextBox txbAddHoraInicio;
-        private TextBox txbAddDateFin;
-        private TextBox txbAddDateInicio;
         private Label label16;
         private Label label15;
         private Label label14;
         private Label label13;
         private Label label12;
-        private Label label11;
         private Label label9;
         private Button btnUpdateReserva;
         private TextBox txbUpdateByIdUsuario;
         private TextBox txbUpdateByIdRecurso;
-        private TextBox txbUpdateDateInicio;
-        private TextBox txbUpdateDateFin;
-        private TextBox txbUpdateHoraInicio;
         private ComboBox cmbUpdateMotivo;
         private ComboBox cmbUpdateEstado;
         private GroupBox groupBox3;
@@ -552,5 +504,9 @@
         private Button btnListUsuarios;
         private Button btnListIdReserva;
         private Button btnGoHome;
+        private DateTimePicker dtpAddFin;
+        private DateTimePicker dtpAddInicio;
+        private DateTimePicker dtpUpdateFin;
+        private DateTimePicker dtpUpdateInicio;
     }
 }
