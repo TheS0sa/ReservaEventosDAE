@@ -52,5 +52,89 @@ namespace cap_Datos
 
             return lista;
         }
+
+
+        // Método para insertar una nueva configuración
+        public bool InsertarConfiguracion(E_Configuracion objConfig)
+        {
+            bool resultado = false;
+
+            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    oconexion.Open();
+                    using (SqlCommand cmd = new SqlCommand("usp_Insert_Configuracion", oconexion))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@clave", objConfig.Clave);
+                        cmd.Parameters.AddWithValue("@valor", objConfig.Valor);
+
+                        cmd.ExecuteNonQuery();
+                        resultado = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al insertar configuración: " + ex.Message);
+                }
+            }
+            return resultado;
+        }
+
+        // Método para actualizar una configuración existente
+        public bool ActualizarConfiguracion(E_Configuracion objConfig)
+        {
+            bool resultado = false;
+            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    oconexion.Open();
+                    using (SqlCommand cmd = new SqlCommand("usp_Update_Configuracion", oconexion))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@idConfig", objConfig.IdConfiguracion);
+                        cmd.Parameters.AddWithValue("@clave", objConfig.Clave);
+                        cmd.Parameters.AddWithValue("@valor", objConfig.Valor);
+                        cmd.ExecuteNonQuery();
+                        resultado = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al actualizar configuración: " + ex.Message);
+                }
+                return resultado;
+            }
+
+        }
+
+        // Método para eliminar una configuración existente
+        public bool EliminarConfiguracion(E_Configuracion objConfig)
+        {
+            bool resultado = false;
+            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand("usp_Delete_Configuracion", oconexion))
+                    {
+                        oconexion.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@idConfig", objConfig.IdConfiguracion);
+                        cmd.ExecuteNonQuery();
+                        resultado = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al eliminar configuración: " + ex.Message);
+                }
+            }
+            return resultado;
+        }
     }
 }
+
+
