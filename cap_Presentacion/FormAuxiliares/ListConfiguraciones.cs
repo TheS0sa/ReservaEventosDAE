@@ -31,6 +31,7 @@ namespace cap_Presentacion.FormAuxiliares
         {
             // Cargar los datos en el DataGridView
             listConfiguraccion.DataSource = objetoCN.ListarConfiguracion();
+            listConfiguraccion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
 
         }

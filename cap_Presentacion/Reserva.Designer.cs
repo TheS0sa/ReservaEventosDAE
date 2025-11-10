@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            dtpAddFin = new DateTimePicker();
+            dtpAddInicio = new DateTimePicker();
             btnListRecurso = new Button();
             btnListUsuarios = new Button();
-            cmbAddEstado = new ComboBox();
             cmbAddMotivo = new ComboBox();
             txbAddByIdRecurso = new TextBox();
             txbAddByIdUsuario = new TextBox();
@@ -40,7 +41,6 @@
             label8 = new Label();
             label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
@@ -49,7 +49,6 @@
             txbDeleteById = new TextBox();
             label16 = new Label();
             label15 = new Label();
-            label14 = new Label();
             label13 = new Label();
             label12 = new Label();
             label9 = new Label();
@@ -57,17 +56,14 @@
             txbUpdateByIdUsuario = new TextBox();
             txbUpdateByIdRecurso = new TextBox();
             cmbUpdateMotivo = new ComboBox();
-            cmbUpdateEstado = new ComboBox();
             groupBox3 = new GroupBox();
+            dtpUpdateFin = new DateTimePicker();
+            dtpUpdateInicio = new DateTimePicker();
             btnListIdReserva = new Button();
             txbUpdateById = new TextBox();
             label10 = new Label();
             btnListarReservas = new Button();
             btnGoHome = new Button();
-            dtpAddInicio = new DateTimePicker();
-            dtpAddFin = new DateTimePicker();
-            dtpUpdateInicio = new DateTimePicker();
-            dtpUpdateFin = new DateTimePicker();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -79,7 +75,6 @@
             groupBox1.Controls.Add(dtpAddInicio);
             groupBox1.Controls.Add(btnListRecurso);
             groupBox1.Controls.Add(btnListUsuarios);
-            groupBox1.Controls.Add(cmbAddEstado);
             groupBox1.Controls.Add(cmbAddMotivo);
             groupBox1.Controls.Add(txbAddByIdRecurso);
             groupBox1.Controls.Add(txbAddByIdUsuario);
@@ -88,7 +83,6 @@
             groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(32, 12);
@@ -97,6 +91,22 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Agregar Reserva";
+            // 
+            // dtpAddFin
+            // 
+            dtpAddFin.Format = DateTimePickerFormat.Time;
+            dtpAddFin.Location = new Point(112, 200);
+            dtpAddFin.Name = "dtpAddFin";
+            dtpAddFin.Size = new Size(250, 27);
+            dtpAddFin.TabIndex = 21;
+            // 
+            // dtpAddInicio
+            // 
+            dtpAddInicio.Format = DateTimePickerFormat.Time;
+            dtpAddInicio.Location = new Point(112, 149);
+            dtpAddInicio.Name = "dtpAddInicio";
+            dtpAddInicio.Size = new Size(250, 27);
+            dtpAddInicio.TabIndex = 20;
             // 
             // btnListRecurso
             // 
@@ -116,17 +126,11 @@
             btnListUsuarios.Text = "...";
             btnListUsuarios.UseVisualStyleBackColor = true;
             // 
-            // cmbAddEstado
-            // 
-            cmbAddEstado.FormattingEnabled = true;
-            cmbAddEstado.Location = new Point(114, 107);
-            cmbAddEstado.Name = "cmbAddEstado";
-            cmbAddEstado.Size = new Size(249, 28);
-            cmbAddEstado.TabIndex = 17;
-            // 
             // cmbAddMotivo
             // 
+            cmbAddMotivo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbAddMotivo.FormattingEnabled = true;
+            cmbAddMotivo.Items.AddRange(new object[] { "Cumpleaños", "Boda", "Graduación", "Quince años", "Baby Shower", "Retiro", "Despedida de Soltero/ra", "Evento Religioso" });
             cmbAddMotivo.Location = new Point(113, 256);
             cmbAddMotivo.Name = "cmbAddMotivo";
             cmbAddMotivo.Size = new Size(252, 28);
@@ -154,6 +158,7 @@
             btnAddReserva.TabIndex = 9;
             btnAddReserva.Text = "Agregar";
             btnAddReserva.UseVisualStyleBackColor = true;
+            btnAddReserva.Click += btnAddReserva_Click;
             // 
             // label7
             // 
@@ -189,15 +194,6 @@
             label4.Size = new Size(45, 20);
             label4.TabIndex = 3;
             label4.Text = "Inicio";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(42, 107);
-            label3.Name = "label3";
-            label3.Size = new Size(54, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Estado";
             // 
             // label2
             // 
@@ -237,6 +233,7 @@
             btnDeleteReserva.TabIndex = 2;
             btnDeleteReserva.Text = "Eliminar";
             btnDeleteReserva.UseVisualStyleBackColor = true;
+            btnDeleteReserva.Click += btnDeleteReserva_Click;
             // 
             // label17
             // 
@@ -271,15 +268,6 @@
             label15.Size = new Size(78, 20);
             label15.TabIndex = 1;
             label15.Text = "Id Recurso";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(49, 132);
-            label14.Name = "label14";
-            label14.Size = new Size(54, 20);
-            label14.TabIndex = 2;
-            label14.Text = "Estado";
             // 
             // label13
             // 
@@ -316,6 +304,7 @@
             btnUpdateReserva.TabIndex = 9;
             btnUpdateReserva.Text = "Editar";
             btnUpdateReserva.UseVisualStyleBackColor = true;
+            btnUpdateReserva.Click += btnUpdateReserva_Click;
             // 
             // txbUpdateByIdUsuario
             // 
@@ -333,19 +322,13 @@
             // 
             // cmbUpdateMotivo
             // 
+            cmbUpdateMotivo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbUpdateMotivo.FormattingEnabled = true;
+            cmbUpdateMotivo.Items.AddRange(new object[] { "Cumpleaños", "Boda", "Graduación", "Quince años", "Baby Shower", "Retiro", "Despedida de Soltero/ra", "Evento Religioso" });
             cmbUpdateMotivo.Location = new Point(119, 286);
             cmbUpdateMotivo.Name = "cmbUpdateMotivo";
             cmbUpdateMotivo.Size = new Size(252, 28);
             cmbUpdateMotivo.TabIndex = 16;
-            // 
-            // cmbUpdateEstado
-            // 
-            cmbUpdateEstado.FormattingEnabled = true;
-            cmbUpdateEstado.Location = new Point(121, 132);
-            cmbUpdateEstado.Name = "cmbUpdateEstado";
-            cmbUpdateEstado.Size = new Size(249, 28);
-            cmbUpdateEstado.TabIndex = 17;
             // 
             // groupBox3
             // 
@@ -354,7 +337,6 @@
             groupBox3.Controls.Add(btnListIdReserva);
             groupBox3.Controls.Add(txbUpdateById);
             groupBox3.Controls.Add(label10);
-            groupBox3.Controls.Add(cmbUpdateEstado);
             groupBox3.Controls.Add(cmbUpdateMotivo);
             groupBox3.Controls.Add(txbUpdateByIdRecurso);
             groupBox3.Controls.Add(txbUpdateByIdUsuario);
@@ -362,7 +344,6 @@
             groupBox3.Controls.Add(label9);
             groupBox3.Controls.Add(label12);
             groupBox3.Controls.Add(label13);
-            groupBox3.Controls.Add(label14);
             groupBox3.Controls.Add(label15);
             groupBox3.Controls.Add(label16);
             groupBox3.Location = new Point(549, 12);
@@ -372,6 +353,22 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Editar Reserva";
             groupBox3.Enter += groupBox3_Enter;
+            // 
+            // dtpUpdateFin
+            // 
+            dtpUpdateFin.Format = DateTimePickerFormat.Time;
+            dtpUpdateFin.Location = new Point(119, 224);
+            dtpUpdateFin.Name = "dtpUpdateFin";
+            dtpUpdateFin.Size = new Size(250, 27);
+            dtpUpdateFin.TabIndex = 22;
+            // 
+            // dtpUpdateInicio
+            // 
+            dtpUpdateInicio.Format = DateTimePickerFormat.Time;
+            dtpUpdateInicio.Location = new Point(126, 171);
+            dtpUpdateInicio.Name = "dtpUpdateInicio";
+            dtpUpdateInicio.Size = new Size(250, 27);
+            dtpUpdateInicio.TabIndex = 21;
             // 
             // btnListIdReserva
             // 
@@ -406,6 +403,7 @@
             btnListarReservas.TabIndex = 19;
             btnListarReservas.Text = "Listar Reservas";
             btnListarReservas.UseVisualStyleBackColor = true;
+            btnListarReservas.Click += btnListarReservas_Click;
             // 
             // btnGoHome
             // 
@@ -416,34 +414,6 @@
             btnGoHome.Text = "Menu";
             btnGoHome.UseVisualStyleBackColor = true;
             btnGoHome.Click += btnGoHome_Click;
-            // 
-            // dtpAddInicio
-            // 
-            dtpAddInicio.Location = new Point(112, 149);
-            dtpAddInicio.Name = "dtpAddInicio";
-            dtpAddInicio.Size = new Size(250, 27);
-            dtpAddInicio.TabIndex = 20;
-            // 
-            // dtpAddFin
-            // 
-            dtpAddFin.Location = new Point(112, 200);
-            dtpAddFin.Name = "dtpAddFin";
-            dtpAddFin.Size = new Size(250, 27);
-            dtpAddFin.TabIndex = 21;
-            // 
-            // dtpUpdateInicio
-            // 
-            dtpUpdateInicio.Location = new Point(126, 171);
-            dtpUpdateInicio.Name = "dtpUpdateInicio";
-            dtpUpdateInicio.Size = new Size(250, 27);
-            dtpUpdateInicio.TabIndex = 21;
-            // 
-            // dtpUpdateFin
-            // 
-            dtpUpdateFin.Location = new Point(119, 224);
-            dtpUpdateFin.Name = "dtpUpdateFin";
-            dtpUpdateFin.Size = new Size(250, 27);
-            dtpUpdateFin.TabIndex = 22;
             // 
             // Reserva
             // 
@@ -457,6 +427,7 @@
             Controls.Add(groupBox1);
             Name = "Reserva";
             Text = "Reserva";
+            Load += Reserva_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -473,18 +444,15 @@
         private Label label8;
         private Label label5;
         private Label label4;
-        private Label label3;
         private Label label2;
         private Label label1;
         private Button btnAddReserva;
         private Label label7;
         private TextBox txbAddByIdRecurso;
         private TextBox txbAddByIdUsuario;
-        private ComboBox cmbAddEstado;
         private ComboBox cmbAddMotivo;
         private Label label16;
         private Label label15;
-        private Label label14;
         private Label label13;
         private Label label12;
         private Label label9;
@@ -492,7 +460,6 @@
         private TextBox txbUpdateByIdUsuario;
         private TextBox txbUpdateByIdRecurso;
         private ComboBox cmbUpdateMotivo;
-        private ComboBox cmbUpdateEstado;
         private GroupBox groupBox3;
         private TextBox txbUpdateById;
         private Label label10;

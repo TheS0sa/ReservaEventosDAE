@@ -14,7 +14,7 @@ namespace cap_Presentacion
 {
     public partial class Configuracion : Form
     {
-
+        // Instancia de la capa de negocios
         private CN_Configuracion objetoCN = new CN_Configuracion();
         public Configuracion()
         {

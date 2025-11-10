@@ -115,6 +115,7 @@
             btnAddUsuario.TabIndex = 4;
             btnAddUsuario.Text = "Agregar";
             btnAddUsuario.UseVisualStyleBackColor = true;
+            btnAddUsuario.Click += btnAddUsuario_Click;
             // 
             // label5
             // 
@@ -162,7 +163,7 @@
             groupBox2.Size = new Size(259, 125);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
-            groupBox2.Text = "groupBox2";
+            groupBox2.Text = "Eliminar Usuario";
             // 
             // label1
             // 
@@ -188,6 +189,7 @@
             btnDeleteUsuario.TabIndex = 0;
             btnDeleteUsuario.Text = "Borrar";
             btnDeleteUsuario.UseVisualStyleBackColor = true;
+            btnDeleteUsuario.Click += btnDeleteUsuario_Click;
             // 
             // btnListarUsuario
             // 
@@ -197,6 +199,7 @@
             btnListarUsuario.TabIndex = 2;
             btnListarUsuario.Text = "Listar Usuarios";
             btnListarUsuario.UseVisualStyleBackColor = true;
+            btnListarUsuario.Click += btnListarUsuario_Click;
             // 
             // groupBox3
             // 
@@ -270,6 +273,7 @@
             btnUpdateUsuario.TabIndex = 4;
             btnUpdateUsuario.Text = "Editar";
             btnUpdateUsuario.UseVisualStyleBackColor = true;
+            btnUpdateUsuario.Click += btnUpdateUsuario_Click;
             // 
             // label6
             // 
@@ -329,6 +333,7 @@
             Controls.Add(groupBox1);
             Name = "Usuario";
             Text = "Usuario";
+            Load += Usuario_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

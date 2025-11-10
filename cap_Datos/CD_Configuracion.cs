@@ -8,6 +8,8 @@ namespace cap_Datos
 {
     public class CD_Configuracion
     {
+
+        // Método para LISTAR todas las configuraciones
         public List<E_Configuracion> ListarConfiguracion()
         {
             List<E_Configuracion> lista = new List<E_Configuracion>();
@@ -54,7 +56,7 @@ namespace cap_Datos
         }
 
 
-        // Método para insertar una nueva configuración
+        // Método para INSERTAR una nueva configuración
         public bool InsertarConfiguracion(E_Configuracion objConfig)
         {
             bool resultado = false;
@@ -82,7 +84,7 @@ namespace cap_Datos
             return resultado;
         }
 
-        // Método para actualizar una configuración existente
+        // Método para ACTUALIZAR una configuración existente
         public bool ActualizarConfiguracion(E_Configuracion objConfig)
         {
             bool resultado = false;
@@ -110,7 +112,7 @@ namespace cap_Datos
 
         }
 
-        // Método para eliminar una configuración existente
+        // Método para ELIMINAR una configuración existente
         public bool EliminarConfiguracion(E_Configuracion objConfig)
         {
             bool resultado = false;

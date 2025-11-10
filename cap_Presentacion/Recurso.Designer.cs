@@ -29,48 +29,44 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            txbAddCapacidad = new NumericUpDown();
             btnAddRecurso = new Button();
             txbAddEstado = new TextBox();
-            txbAddCapacidad = new TextBox();
-            txbAddTipo = new TextBox();
             txbAddNombre = new TextBox();
             label4 = new Label();
             label3 = new Label();
-            label2 = new Label();
             label1 = new Label();
             groupBox3 = new GroupBox();
             btnDeleteRecurso = new Button();
             label10 = new Label();
             txbDeleteById = new TextBox();
             groupBox4 = new GroupBox();
+            txbUpdateCapacidad = new NumericUpDown();
             txbUpdateById = new TextBox();
             label9 = new Label();
             btnUpdateRecurso = new Button();
             txbUpdateEstado = new TextBox();
-            txbUpdateCapacidad = new TextBox();
-            txbUpdateTipo = new TextBox();
             txbUpdateNombre = new TextBox();
             label5 = new Label();
             label6 = new Label();
-            label7 = new Label();
             label8 = new Label();
             btnListarRecurso = new Button();
             btnGoHome = new Button();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)txbAddCapacidad).BeginInit();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)txbUpdateCapacidad).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(txbAddCapacidad);
             groupBox1.Controls.Add(btnAddRecurso);
             groupBox1.Controls.Add(txbAddEstado);
-            groupBox1.Controls.Add(txbAddCapacidad);
-            groupBox1.Controls.Add(txbAddTipo);
             groupBox1.Controls.Add(txbAddNombre);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 22);
             groupBox1.Name = "groupBox1";
@@ -79,39 +75,36 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Agregar Recurso";
             // 
+            // txbAddCapacidad
+            // 
+            txbAddCapacidad.Location = new Point(100, 97);
+            txbAddCapacidad.Maximum = new decimal(new int[] { 150, 0, 0, 0 });
+            txbAddCapacidad.Minimum = new decimal(new int[] { 25, 0, 0, 0 });
+            txbAddCapacidad.Name = "txbAddCapacidad";
+            txbAddCapacidad.Size = new Size(163, 27);
+            txbAddCapacidad.TabIndex = 9;
+            txbAddCapacidad.Value = new decimal(new int[] { 25, 0, 0, 0 });
+            // 
             // btnAddRecurso
             // 
-            btnAddRecurso.Location = new Point(169, 199);
+            btnAddRecurso.Location = new Point(169, 185);
             btnAddRecurso.Name = "btnAddRecurso";
             btnAddRecurso.Size = new Size(94, 29);
             btnAddRecurso.TabIndex = 8;
             btnAddRecurso.Text = "Agregar";
             btnAddRecurso.UseVisualStyleBackColor = true;
+            btnAddRecurso.Click += btnAddRecurso_Click;
             // 
             // txbAddEstado
             // 
-            txbAddEstado.Location = new Point(100, 156);
+            txbAddEstado.Location = new Point(100, 142);
             txbAddEstado.Name = "txbAddEstado";
             txbAddEstado.Size = new Size(163, 27);
             txbAddEstado.TabIndex = 7;
             // 
-            // txbAddCapacidad
-            // 
-            txbAddCapacidad.Location = new Point(100, 111);
-            txbAddCapacidad.Name = "txbAddCapacidad";
-            txbAddCapacidad.Size = new Size(163, 27);
-            txbAddCapacidad.TabIndex = 6;
-            // 
-            // txbAddTipo
-            // 
-            txbAddTipo.Location = new Point(100, 69);
-            txbAddTipo.Name = "txbAddTipo";
-            txbAddTipo.Size = new Size(163, 27);
-            txbAddTipo.TabIndex = 5;
-            // 
             // txbAddNombre
             // 
-            txbAddNombre.Location = new Point(100, 34);
+            txbAddNombre.Location = new Point(100, 41);
             txbAddNombre.Name = "txbAddNombre";
             txbAddNombre.Size = new Size(163, 27);
             txbAddNombre.TabIndex = 4;
@@ -119,7 +112,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(31, 156);
+            label4.Location = new Point(31, 142);
             label4.Name = "label4";
             label4.Size = new Size(54, 20);
             label4.TabIndex = 3;
@@ -128,25 +121,16 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(5, 111);
+            label3.Location = new Point(5, 97);
             label3.Name = "label3";
             label3.Size = new Size(80, 20);
             label3.TabIndex = 2;
             label3.Text = "Capacidad";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(31, 69);
-            label2.Name = "label2";
-            label2.Size = new Size(39, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Tipo";
-            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 37);
+            label1.Location = new Point(6, 44);
             label1.Name = "label1";
             label1.Size = new Size(64, 20);
             label1.TabIndex = 0;
@@ -172,6 +156,7 @@
             btnDeleteRecurso.TabIndex = 2;
             btnDeleteRecurso.Text = "Borrar";
             btnDeleteRecurso.UseVisualStyleBackColor = true;
+            btnDeleteRecurso.Click += btnDeleteRecurso_Click;
             // 
             // label10
             // 
@@ -191,16 +176,14 @@
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(txbUpdateCapacidad);
             groupBox4.Controls.Add(txbUpdateById);
             groupBox4.Controls.Add(label9);
             groupBox4.Controls.Add(btnUpdateRecurso);
             groupBox4.Controls.Add(txbUpdateEstado);
-            groupBox4.Controls.Add(txbUpdateCapacidad);
-            groupBox4.Controls.Add(txbUpdateTipo);
             groupBox4.Controls.Add(txbUpdateNombre);
             groupBox4.Controls.Add(label5);
             groupBox4.Controls.Add(label6);
-            groupBox4.Controls.Add(label7);
             groupBox4.Controls.Add(label8);
             groupBox4.Location = new Point(383, 33);
             groupBox4.Name = "groupBox4";
@@ -209,9 +192,19 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Editar Recurso";
             // 
+            // txbUpdateCapacidad
+            // 
+            txbUpdateCapacidad.Location = new Point(104, 152);
+            txbUpdateCapacidad.Maximum = new decimal(new int[] { 150, 0, 0, 0 });
+            txbUpdateCapacidad.Minimum = new decimal(new int[] { 25, 0, 0, 0 });
+            txbUpdateCapacidad.Name = "txbUpdateCapacidad";
+            txbUpdateCapacidad.Size = new Size(163, 27);
+            txbUpdateCapacidad.TabIndex = 10;
+            txbUpdateCapacidad.Value = new decimal(new int[] { 25, 0, 0, 0 });
+            // 
             // txbUpdateById
             // 
-            txbUpdateById.Location = new Point(98, 25);
+            txbUpdateById.Location = new Point(102, 43);
             txbUpdateById.Name = "txbUpdateById";
             txbUpdateById.Size = new Size(165, 27);
             txbUpdateById.TabIndex = 10;
@@ -219,7 +212,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(8, 30);
+            label9.Location = new Point(12, 48);
             label9.Name = "label9";
             label9.Size = new Size(77, 20);
             label9.TabIndex = 9;
@@ -233,31 +226,18 @@
             btnUpdateRecurso.TabIndex = 8;
             btnUpdateRecurso.Text = "Editar";
             btnUpdateRecurso.UseVisualStyleBackColor = true;
+            btnUpdateRecurso.Click += btnUpdateRecurso_Click;
             // 
             // txbUpdateEstado
             // 
-            txbUpdateEstado.Location = new Point(100, 185);
+            txbUpdateEstado.Location = new Point(104, 198);
             txbUpdateEstado.Name = "txbUpdateEstado";
             txbUpdateEstado.Size = new Size(163, 27);
             txbUpdateEstado.TabIndex = 7;
             // 
-            // txbUpdateCapacidad
-            // 
-            txbUpdateCapacidad.Location = new Point(100, 145);
-            txbUpdateCapacidad.Name = "txbUpdateCapacidad";
-            txbUpdateCapacidad.Size = new Size(163, 27);
-            txbUpdateCapacidad.TabIndex = 6;
-            // 
-            // txbUpdateTipo
-            // 
-            txbUpdateTipo.Location = new Point(100, 108);
-            txbUpdateTipo.Name = "txbUpdateTipo";
-            txbUpdateTipo.Size = new Size(163, 27);
-            txbUpdateTipo.TabIndex = 5;
-            // 
             // txbUpdateNombre
             // 
-            txbUpdateNombre.Location = new Point(100, 62);
+            txbUpdateNombre.Location = new Point(102, 101);
             txbUpdateNombre.Name = "txbUpdateNombre";
             txbUpdateNombre.Size = new Size(163, 27);
             txbUpdateNombre.TabIndex = 4;
@@ -265,7 +245,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(31, 188);
+            label5.Location = new Point(35, 198);
             label5.Name = "label5";
             label5.Size = new Size(54, 20);
             label5.TabIndex = 3;
@@ -274,25 +254,16 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(5, 152);
+            label6.Location = new Point(9, 152);
             label6.Name = "label6";
             label6.Size = new Size(80, 20);
             label6.TabIndex = 2;
             label6.Text = "Capacidad";
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(46, 111);
-            label7.Name = "label7";
-            label7.Size = new Size(39, 20);
-            label7.TabIndex = 1;
-            label7.Text = "Tipo";
-            // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(21, 65);
+            label8.Location = new Point(23, 104);
             label8.Name = "label8";
             label8.Size = new Size(64, 20);
             label8.TabIndex = 0;
@@ -306,6 +277,7 @@
             btnListarRecurso.TabIndex = 10;
             btnListarRecurso.Text = "Listar Recurso";
             btnListarRecurso.UseVisualStyleBackColor = true;
+            btnListarRecurso.Click += btnListarRecurso_Click;
             // 
             // btnGoHome
             // 
@@ -331,10 +303,12 @@
             Text = "Recurso";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)txbAddCapacidad).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)txbUpdateCapacidad).EndInit();
             ResumeLayout(false);
         }
 
@@ -343,7 +317,6 @@
         private GroupBox groupBox1;
         private Label label4;
         private Label label3;
-        private Label label2;
         private Label label1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
@@ -357,23 +330,18 @@
         private Label label9;
         private Button btnUpdateRecurso;
         private TextBox txbUpdateEstado;
-        private TextBox txbUpdateCapacidad;
-        private TextBox txbUpdateTipo;
         private TextBox txbUpdateNombre;
         private Label label5;
         private Label label6;
-        private Label label7;
         private Label label8;
         private Button btnDeleteRecurso;
         private Label label10;
         private TextBox txbDeleteById;
         private Button btnListarRecurso;
         private Button btnGoHome;
-        // Agrega la definición del campo txbAddTipo en la clase Recurso
-        private TextBox txbAddTipo;
         // Agrega la definición del campo txbAddEstado en la clase Recurso
         private TextBox txbAddEstado;
-        // Agrega la definición del campo txbAddCapacidad en la clase Recurso
-        private TextBox txbAddCapacidad;
+        private NumericUpDown txbAddCapacidad;
+        private NumericUpDown txbUpdateCapacidad;
     }
 }

@@ -34,10 +34,13 @@
             // 
             // listConfiguraccion
             // 
+            listConfiguraccion.AllowUserToAddRows = false;
+            listConfiguraccion.AllowUserToDeleteRows = false;
             listConfiguraccion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             listConfiguraccion.Dock = DockStyle.Fill;
             listConfiguraccion.Location = new Point(0, 0);
             listConfiguraccion.Name = "listConfiguraccion";
+            listConfiguraccion.ReadOnly = true;
             listConfiguraccion.RowHeadersWidth = 51;
             listConfiguraccion.Size = new Size(800, 450);
             listConfiguraccion.TabIndex = 0;
